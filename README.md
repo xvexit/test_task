@@ -99,18 +99,29 @@ php artisan fetch:stocks
 
 ## Удалённая БД (production)
 
-Развёрнута на бесплатном хостинге. Подключение:
+Развёрнута на Clever Cloud (план DEV, бесплатный, 256 MB). Версия MySQL: 8.0.
 
-Хост: <будет добавлен после деплоя>
-Порт: <будет добавлен>
-База данных: <будет добавлена>
-Пользователь: <будет добавлен>
-Пароль: <будет добавлен>
+Подключение:
+
+- **Хост**: `b7uml0pwpunyzdp2fqbm-mysql.services.clever-cloud.com`
+- **Порт**: `3306`
+- **База данных**: `b7uml0pwpunyzdp2fqbm`
+- **Пользователь**: `ucaeiqiswf1eov0n`
+- **Пароль**: `GM0nKvaFevpMqsBou29c`
 
 Таблицы в удалённой БД: `orders`, `sales`, `stocks`, `incomes` (структура такая же, как описана выше).
+
+Количество строк на момент деплоя:
+
+| Таблица | Строк |
+|---|---|
+| `orders` | 41 710 |
+| `sales` | 37 883 |
+| `stocks` | 3 643 |
+| `incomes` | 213 |
 
 Для подключения можно использовать любой MySQL-клиент (DBeaver, MySQL Workbench, mysql CLI):
 
 ```bash
-mysql -h <host> -P <port> -u <user> -p <database>
+mysql -h b7uml0pwpunyzdp2fqbm-mysql.services.clever-cloud.com -P 3306 -u ucaeiqiswf1eov0n -pGM0nKvaFevpMqsBou29c b7uml0pwpunyzdp2fqbm
 ```
