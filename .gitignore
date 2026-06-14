@@ -16,3 +16,4 @@ auth.json
 /.fleet
 /.idea
 /.vscode
+.env.production
